@@ -38,7 +38,7 @@
 		1B604A2525A8753800E8DD9D /* CVTextureCache.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B60495C25A8753700E8DD9D /* CVTextureCache.mm */; };
 		1B604A2625A8753800E8DD9D /* DeviceSettings.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B60495E25A8753700E8DD9D /* DeviceSettings.mm */; };
 		1B604A2725A8753800E8DD9D /* FullScreenVideoPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B60496125A8753700E8DD9D /* FullScreenVideoPlayer.mm */; };
-		1B604A2825A8753800E8DD9D /* DisplayManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B60496325A8753700E8DD9D /* DisplayManager.mm */; };
+		1B604A2825A8753800E8DD9D /* DisplayManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B60496325A8753700E8DD9D /* DisplayManager.mm */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		1B604A2925A8753800E8DD9D /* CameraCapture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B60496425A8753700E8DD9D /* CameraCapture.mm */; };
 		1B604A2A25A8753800E8DD9D /* UnityReplayKit_Scripting.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B60496525A8753700E8DD9D /* UnityReplayKit_Scripting.mm */; };
 		1B604A2B25A8753800E8DD9D /* MetalHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B60496825A8753700E8DD9D /* MetalHelper.mm */; };

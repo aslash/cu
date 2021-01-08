@@ -46,6 +46,11 @@ Application* app = nullptr;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[SDKWrapper getInstance] application:application didFinishLaunchingWithOptions:launchOptions];
     // Add the view controller's view to the window and display.
+    
+    // unity viewcontroller
+    _unityController = [[UnityAppController alloc] init];
+    [_unityController application:application didFinishLaunchingWithOptions:launchOptions];
+    
     float scale = [[UIScreen mainScreen] scale];
     CGRect bounds = [[UIScreen mainScreen] bounds];
     window = [[UIWindow alloc] initWithFrame: bounds];
@@ -84,7 +89,7 @@ Application* app = nullptr;
     
     //run the cocos2d-x game scene
     app->start();
-    
+
     return YES;
 }
 
@@ -145,4 +150,41 @@ Application* app = nullptr;
      */
 }
 
+#pragma mark -
+#pragma mark Unity
+
+// unity 交互unity
+- (UIWindow *)unityWindow {
+    return UnityGetMainWindow();
+}
+
+- (void)showUnityWindow {
+    UnityPause(false);
+    [self.unityWindow makeKeyAndVisible];
+}
+
+- (void)hideUnityWindow {
+    UnityPause(true);
+    [window makeKeyAndVisible];
+}
+
+- (void)resumeUnity {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"UnityWindow, resume unity");
+        cocos2d::Application::getInstance()->onPause();
+
+        [self.unityController applicationDidBecomeActive:[UIApplication sharedApplication]];
+        [self showUnityWindow];
+    });
+}
+
+- (void)parseUnity {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"UnityWindow, parse unity");
+        [self hideUnityWindow];
+
+        [(__bridge CCEAGLView *)cocos2d::Application::getInstance()->getView() setCurrentContext];
+        cocos2d::Application::getInstance()->onResume();
+    });
+}
 @end

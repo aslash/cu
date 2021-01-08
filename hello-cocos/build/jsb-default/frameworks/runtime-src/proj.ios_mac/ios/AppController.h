@@ -24,14 +24,23 @@
  THE SOFTWARE.
  ****************************************************************************/
 #import <UIKit/UIKit.h>
+#import "UnityAppController.h"
 
 @class RootViewController;
 
 @interface AppController : NSObject <UIApplicationDelegate>
 {
+    
 }
 
+@property (nonatomic, strong) UnityAppController *unityController;
+@property (nonatomic, strong) UIWindow *unityWindow;
+
 @property(nonatomic, readonly) RootViewController* viewController;
+
+- (void)showUnityWindow;
+- (void)resumeUnity;
+- (void)parseUnity;
 
 @end
 
