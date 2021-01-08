@@ -36,6 +36,19 @@ cc.Class({
 
     onClickOpenUnity () {
         console.log("onClickOpenUnity...");
+        let obj = {
+            name : "cu",
+            number : 1000
+        };
+
+        let params = JSON.stringify(obj);
+        if (cc.sys.os == cc.sys.OS_ANDROID) {
+            jsb.reflection.callStaticMethod("com/tencent/abcmouse/unity/UnityLauncher", "start", "(Ljava/lang/String;)V", JSON.stringify(params));
+        }
+        else if(cc.sys.isNative && cc.sys.os == cc.sys.OS_IOS) {
+            jsb.reflection.callStaticMethod("CUBridge", "OpenUnity:", JSON.stringify(params));
+        }
+        
     }
 
     // update (dt) {},

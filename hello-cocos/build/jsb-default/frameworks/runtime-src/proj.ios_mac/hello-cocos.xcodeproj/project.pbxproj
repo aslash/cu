@@ -183,6 +183,7 @@
 		1B604AB625A8753800E8DD9D /* MapFileParser.sh in Resources */ = {isa = PBXBuildFile; fileRef = 1B604A1825A8753800E8DD9D /* MapFileParser.sh */; };
 		1B604ABA25A8754000E8DD9D /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 1B604AB925A8754000E8DD9D /* Data */; };
 		1B604AC025A875A800E8DD9D /* libiconv.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B604ABF25A875A800E8DD9D /* libiconv.2.tbd */; };
+		1B604ADD25A87A5600E8DD9D /* CUBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B604ADC25A87A5600E8DD9D /* CUBridge.m */; };
 		22CC756521BA528000FBF2F7 /* SDKWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CC756121BA527F00FBF2F7 /* SDKWrapper.m */; };
 		288D4373225B43BE0075FBAB /* subpackages in Resources */ = {isa = PBXBuildFile; fileRef = 288D4372225B43BE0075FBAB /* subpackages */; };
 		294D7D7C1D0D667B002CE7B7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 294D7D7B1D0D667B002CE7B7 /* CoreText.framework */; };
@@ -939,6 +940,8 @@
 		1B604A1825A8753800E8DD9D /* MapFileParser.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = MapFileParser.sh; path = Unity/MapFileParser.sh; sourceTree = "<group>"; };
 		1B604AB925A8754000E8DD9D /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = Unity/Data; sourceTree = "<group>"; };
 		1B604ABF25A875A800E8DD9D /* libiconv.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.3.sdk/usr/lib/libiconv.2.tbd; sourceTree = DEVELOPER_DIR; };
+		1B604ADB25A879AA00E8DD9D /* CUBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CUBridge.h; sourceTree = "<group>"; };
+		1B604ADC25A87A5600E8DD9D /* CUBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CUBridge.m; sourceTree = "<group>"; };
 		22CC756121BA527F00FBF2F7 /* SDKWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDKWrapper.m; path = ios/SDKWrapper.m; sourceTree = "<group>"; };
 		22CC756221BA527F00FBF2F7 /* SDKWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDKWrapper.h; path = ios/SDKWrapper.h; sourceTree = "<group>"; };
 		22CC756421BA527F00FBF2F7 /* SDKDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDKDelegate.h; sourceTree = "<group>"; };
@@ -2407,6 +2410,15 @@
 			path = PluginBase;
 			sourceTree = "<group>";
 		};
+		1B604ADA25A8798500E8DD9D /* CUBridge */ = {
+			isa = PBXGroup;
+			children = (
+				1B604ADB25A879AA00E8DD9D /* CUBridge.h */,
+				1B604ADC25A87A5600E8DD9D /* CUBridge.m */,
+			);
+			path = CUBridge;
+			sourceTree = "<group>";
+		};
 		22CC756321BA527F00FBF2F7 /* service */ = {
 			isa = PBXGroup;
 			children = (
@@ -2504,6 +2516,7 @@
 		D45446CC156DE73F00887EB5 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				1B604ADA25A8798500E8DD9D /* CUBridge */,
 				1B604A0025A8753800E8DD9D /* main.mm */,
 				051C017421E2F91200D4A347 /* UserConfigIOS.debug.xcconfig */,
 				051C017521E2F91200D4A347 /* UserConfigIOS.release.xcconfig */,
@@ -2857,6 +2870,7 @@
 				1B604A8B25A8753800E8DD9D /* Bulk_UnityEngine.CoreModule_0.cpp in Sources */,
 				1B604AB225A8753800E8DD9D /* RenderPluginDelegate.mm in Sources */,
 				1B604A5225A8753800E8DD9D /* GenericMethods0.cpp in Sources */,
+				1B604ADD25A87A5600E8DD9D /* CUBridge.m in Sources */,
 				1B604A9925A8753800E8DD9D /* Bulk_UnityEngine_0.cpp in Sources */,
 				1B604A2B25A8753800E8DD9D /* MetalHelper.mm in Sources */,
 				1B604A5125A8753800E8DD9D /* Il2CppCompilerCalculateTypeValues_16Table.cpp in Sources */,
