@@ -275,6 +275,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1B603FC825A8549600E8DD9D /* Unity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Unity;
+			sourceTree = "<group>";
+		};
 		22CC756321BA527F00FBF2F7 /* service */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +307,7 @@
 		A92275321517C094001B78AA = {
 			isa = PBXGroup;
 			children = (
+				1B603FC825A8549600E8DD9D /* Unity */,
 				288D4372225B43BE0075FBAB /* subpackages */,
 				1AC6FB34180E9ACB004C840B /* cocos2d_libs.xcodeproj */,
 				D4545214156E28EF00887EB5 /* Classes */,
