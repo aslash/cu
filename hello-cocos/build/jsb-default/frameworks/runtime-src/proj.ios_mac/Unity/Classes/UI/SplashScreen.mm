@@ -4,7 +4,7 @@
 #include "Unity/ObjCRuntime.h"
 #include "UI/UnityView.h"
 #include <cstring>
-#include "Classes/Unity/UnitySharedDecls.h"
+#include "UnitySharedDecls.h"
 
 extern "C" const char* UnityGetLaunchScreenXib();
 

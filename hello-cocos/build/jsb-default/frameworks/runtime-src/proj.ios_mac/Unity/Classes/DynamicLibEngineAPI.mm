@@ -135,7 +135,7 @@
     extern "C" void Set##className##funcName##Body(decltype(&className::funcName));
 
     #include "UnityRendering.h"
-    #include "Classes/iPhone_Sensors.h"
+    #include "iPhone_Sensors.h"
 
     #include "DynamicLibEngineAPI-functions.h"
 

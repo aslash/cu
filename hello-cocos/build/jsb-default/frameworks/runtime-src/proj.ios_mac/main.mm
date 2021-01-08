@@ -10,7 +10,7 @@ static const int constsection = 0;
 void UnityInitTrampoline();
 
 // WARNING: this MUST be c decl (NSString ctor will be called after +load, so we cant really change its value)
-const char* AppControllerClassName = "UnityAppController";
+const char* AppControllerClassName = "AppController";
 
 #if UNITY_USES_DYNAMIC_PLAYER_LIB
 extern "C" void SetAllUnityFunctionsForDynamicPlayerLib();
